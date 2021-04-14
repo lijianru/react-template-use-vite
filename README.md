@@ -11,6 +11,14 @@
 ### 清理src目录
 删除src目录下无用的文件，组织新的文件夹目录。
 
+### 安装normalize.css
+```
+yarn add normalize.css
+
+// 在main中引入normalize.css
+import 'normalize.css'
+```
+
 ### 安装rect-router-dom
 ```
 yarn add react-router-dom
