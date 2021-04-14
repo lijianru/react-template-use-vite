@@ -67,3 +67,27 @@ export default defineConfig({
 // 获取
 const env = process.argv[process.argv.length - 1]
 ```
+
+### 路径别名
+```
+yarn add @types/node -D
+
+// 在tsconfig.json中配置
+{
+  compilerOptions: {
+    "baseUrl": "./src",
+    "paths": {
+      "pages": ["pages/*"],
+      "components": ["components/*"]
+    }
+  }
+}
+
+// 在vite.config.js配置
+resolve: {
+  alias: {
+    pages: path.resolve(__dirname, 'src/pages'),
+    components: path.resolve(__dirname, 'src/components'),
+  },
+},
+```
