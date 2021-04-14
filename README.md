@@ -16,3 +16,32 @@
 yarn add react-router-dom
 yarn add @types/react-router-dom -D
 ```
+
+### 安装ant-design
+```
+yarn add antd
+
+yarn add vite-plugin-imp less -D
+
+// 修改vite.config.js
+export default defineConfig({
+  plugins: [
+    reactRefresh(),
+    vitePluginImp({
+      libList: [
+        {
+          libName: 'antd',
+          style: (name) => `antd/lib/${name}/style/index.less`,
+        },
+      ],
+    }),
+  ],
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+      },
+    },
+  },
+});
+```
