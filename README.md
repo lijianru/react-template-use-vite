@@ -53,3 +53,17 @@ export default defineConfig({
   },
 });
 ```
+
+### 环境变量
+```
+// 修改脚本
+"scripts": {
+  "start": "vite --mode dev",
+  "build:test": "vite build --mode test",
+  "build:prod": "vite build --mode prod",
+  "serve": "vite preview"
+},
+
+// 获取
+const env = process.argv[process.argv.length - 1]
+```
