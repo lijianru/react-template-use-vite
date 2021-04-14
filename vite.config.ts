@@ -1,17 +1,20 @@
 import { defineConfig } from 'vite';
 import reactRefresh from '@vitejs/plugin-react-refresh';
-import vitePluginImp from 'vite-plugin-imp';
+import styleImport from 'vite-plugin-style-import';
 import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     reactRefresh(),
-    vitePluginImp({
-      libList: [
+    styleImport({
+      libs: [
         {
-          libName: 'antd',
-          style: (name) => `antd/lib/${name}/style/index.less`,
+          libraryName: 'antd',
+          esModule: true,
+          resolveStyle: (name) => {
+            return `antd/es/${name}/style/index`;
+          },
         },
       ],
     }),

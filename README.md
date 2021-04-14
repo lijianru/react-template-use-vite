@@ -29,17 +29,20 @@ yarn add @types/react-router-dom -D
 ```
 yarn add antd
 
-yarn add vite-plugin-imp less -D
+yarn add vite-plugin-style-import less -D
 
 // 修改vite.config.js
 export default defineConfig({
   plugins: [
     reactRefresh(),
-    vitePluginImp({
-      libList: [
+    styleImport({
+      libs: [
         {
-          libName: 'antd',
-          style: (name) => `antd/lib/${name}/style/index.less`,
+          libraryName: 'antd',
+          esModule: true,
+          resolveStyle: (name) => {
+            return `antd/es/${name}/style/index`;
+          },
         },
       ],
     }),
