@@ -1,42 +1,16 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import styles from './App.module.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ROUTERS } from './constants/router';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className={styles.app}>
-      <header className={styles.app_header}>
-        <img src={logo} className={styles.app_logo} alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button onClick={() => setCount((count) => count + 1)}>count is: {count}</button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className={styles.app_link}
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className={styles.app_link}
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        {ROUTERS.map(({ path, component }) => (
+          <Route exact key={path} path={path} component={component} />
+        ))}
+      </Switch>
+    </Router>
   );
 }
 
