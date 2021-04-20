@@ -2,10 +2,6 @@ import { Button, Table, Tag, Space } from 'antd';
 import React from 'react';
 
 export function Home() {
-  function handleChange(value: any) {
-    console.log(`selected ${value}`);
-  }
-
   const columns = [
     {
       title: 'Name',
@@ -29,7 +25,7 @@ export function Home() {
       dataIndex: 'tags',
       render: (tags: string[]) => (
         <>
-          {tags.map((tag) => {
+          {tags.map(tag => {
             let color = tag.length > 5 ? 'geekblue' : 'green';
             if (tag === 'loser') {
               color = 'volcano';

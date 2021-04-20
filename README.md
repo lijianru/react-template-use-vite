@@ -94,3 +94,46 @@ resolve: {
   },
 },
 ```
+
+### eslint
+```
+yarn add eslint -D
+
+eslint --init
+// 将生成一份eslint配置文件
+// ✔ How would you like to use ESLint? · problems
+// ✔ What type of modules does your project use? · esm
+// ✔ Which framework does your project use? · react
+// ✔ Does your project use TypeScript? · Yes
+// ✔ Where does your code run? · browser
+// ✔ What format do you want your config file to be in? · JSON
+// ✔ Would you like to install them now with npm? · Yes
+
+// 在package.json中添加脚本
+"eslint": "eslint src"
+
+// 添加如下配置到eslintrc.json
+"settings": {
+  "react": {
+    "version": "detect" // 自动检测react版本
+  }
+},
+"rules": {
+  "@typescript-eslint/explicit-module-boundary-types": 0,
+  "react/display-name": 0
+}
+```
+
+### prettier
+```
+yarn add --dev --exact prettier
+
+// 生成配置文件
+echo {}> .prettierrc.json
+
+// 排除不需要格式化的文件目录
+echo > .prettierignore
+
+// 添加脚本
+"prettier": "prettier --config ./.prettierrc.json --write 'src/**/*.@(js|ts)?(x)'"
+```
