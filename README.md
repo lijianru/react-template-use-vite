@@ -5,6 +5,9 @@
 - [x] react
 - [x] react-router-dom
 - [x] ant-design
+- [x] eslint
+- [x] prettier
+- [x] normalize.css
 - [ ] axios
 
 ## 具体步骤
