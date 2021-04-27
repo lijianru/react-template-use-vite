@@ -25,6 +25,7 @@
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "react/display-name": 0,
-    "semi": "error"
+    "semi": "error",
+    "react/no-unescaped-entities": 0
   }
 }
