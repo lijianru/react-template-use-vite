@@ -140,3 +140,9 @@ echo > .prettierignore
 // 添加脚本
 "prettier": "prettier --config ./.prettierrc.json --write 'src/**/*.@(js|ts)?(x)'"
 ```
+
+### storybook
+```
+// 初始化storybook配置
+npx sb init
+```
