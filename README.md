@@ -193,3 +193,13 @@ import "tailwindcss/tailwind.css"
 // tailwind.config.js
 purge: ['./index.html', './src/**/*.tsx'],
 ```
+
+### redux
+
+```
+yarn add @reduxjs/toolkit react-redux
+
+yarn add redux-devtools -D
+
+// 按照文档配置https://redux.js.org/tutorials/quick-start
+```

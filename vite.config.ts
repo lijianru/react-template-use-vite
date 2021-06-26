@@ -12,7 +12,7 @@ export default defineConfig({
         {
           libraryName: 'antd',
           esModule: true,
-          resolveStyle: (name) => {
+          resolveStyle: name => {
             return `antd/es/${name}/style/index`;
           },
         },
@@ -30,6 +30,7 @@ export default defineConfig({
     alias: {
       pages: path.resolve(__dirname, 'src/pages'),
       components: path.resolve(__dirname, 'src/components'),
+      slice: path.resolve(__dirname, 'src/slice'),
     },
   },
 });
