@@ -9,6 +9,7 @@
 - [x] prettier
 - [x] normalize.css
 - [ ] axios
+- [ ] redux
 
 ## 具体步骤
 ### 清理src目录
