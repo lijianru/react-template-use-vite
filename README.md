@@ -68,7 +68,7 @@ export default defineConfig({
 "scripts": {
   "start": "vite --mode dev",
   "build:test": "vite build --mode test",
-  "build:prod": "vite build --mode prod",
+  "build:prod": "vite build --mode production",
   "serve": "vite preview"
 },
 
@@ -189,7 +189,7 @@ npx tailwindcss init
 // main.js
 import "tailwindcss/tailwind.css"
 
-// 为生产而构建时，请确保配置清除 (purge) 选项以删除任何未使用类，这样生成的文件尺寸最小
+// 为生产而构建时，请确保配置清除 (purge) 选项以删除任何未使用类，这样生成的文件尺寸最小(当NODE_ENV设置为production时)
 // tailwind.config.js
 purge: ['./index.html', './src/**/*.tsx'],
 ```
