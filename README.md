@@ -1,6 +1,9 @@
-# react模版工程
+# react 模版工程
+
 ## 概述
-使用vite搭建一个react模版工程。
+
+使用 vite 搭建一个 react 模版工程。
+
 - [x] vite
 - [x] react
 - [x] react-router-dom
@@ -8,14 +11,18 @@
 - [x] eslint
 - [x] prettier
 - [x] normalize.css
+- [x] storybook
 - [ ] axios
 - [ ] redux
 
 ## 具体步骤
-### 清理src目录
-删除src目录下无用的文件，组织新的文件夹目录。
 
-### 安装normalize.css
+### 清理 src 目录
+
+删除 src 目录下无用的文件，组织新的文件夹目录。
+
+### 安装 normalize.css
+
 ```
 yarn add normalize.css
 
@@ -23,13 +30,15 @@ yarn add normalize.css
 import 'normalize.css'
 ```
 
-### 安装rect-router-dom
+### 安装 rect-router-dom
+
 ```
 yarn add react-router-dom
 yarn add @types/react-router-dom -D
 ```
 
-### 安装ant-design
+### 安装 ant-design
+
 ```
 yarn add antd
 
@@ -62,6 +71,7 @@ export default defineConfig({
 ```
 
 ### 环境变量
+
 ```
 // 修改脚本
 "scripts": {
@@ -76,6 +86,7 @@ const env = process.argv[process.argv.length - 1]
 ```
 
 ### 路径别名
+
 ```
 yarn add @types/node -D
 
@@ -100,6 +111,7 @@ resolve: {
 ```
 
 ### eslint
+
 ```
 yarn add eslint -D
 
@@ -129,6 +141,7 @@ eslint --init
 ```
 
 ### prettier
+
 ```
 yarn add --dev --exact prettier
 
@@ -143,7 +156,19 @@ echo > .prettierignore
 ```
 
 ### storybook
+
 ```
 // 初始化storybook配置
 npx sb init
+// 上面的命令将对您的本地环境进行以下更改：
+// - 安装所需的依赖项。
+// - 设置必要的脚本来运行和构建 Storybook。
+// - 添加默认的 Storybook 配置。
+// - 添加一些样板story以帮助您入门。
+
+// 清理默认的样板story，并修改.storybook中的main.js配置
+module.exports = {
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'], // 修改引入路径
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+};
 ```
