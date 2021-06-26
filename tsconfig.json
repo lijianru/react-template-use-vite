@@ -19,7 +19,7 @@
     "paths": {
       "pages": ["pages/*"],
       "components": ["components/*"],
-      "slice": ["slice/*"]
+      "state-container": ["state-container/*"]
     }
   },
   "include": ["./src", "stories"]

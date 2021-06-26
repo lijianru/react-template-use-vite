@@ -6,7 +6,7 @@
     "build:test": "vite build --mode test",
     "build:prod": "vite build --mode production",
     "serve": "vite preview",
-    "eslint": "tsc & eslint src",
+    "eslint": "tsc && eslint src",
     "prettier": "prettier --config ./.prettierrc.json --write 'src/**/*.@(js|ts)?(x)'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"

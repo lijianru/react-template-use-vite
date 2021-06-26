@@ -30,7 +30,7 @@ export default defineConfig({
     alias: {
       pages: path.resolve(__dirname, 'src/pages'),
       components: path.resolve(__dirname, 'src/components'),
-      slice: path.resolve(__dirname, 'src/slice'),
+      'state-container': path.resolve(__dirname, 'src/state-container'),
     },
   },
 });

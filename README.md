@@ -12,8 +12,8 @@
 - [x] prettier
 - [x] storybook
 - [x] tailwindcss
+- [x] redux
 - [ ] axios
-- [ ] redux
 
 ## 具体步骤
 
