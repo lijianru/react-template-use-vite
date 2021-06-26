@@ -11,6 +11,7 @@
 - [x] eslint
 - [x] prettier
 - [x] storybook
+- [x] tailwindcss
 - [ ] axios
 - [ ] redux
 
@@ -161,4 +162,34 @@ module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'], // 修改引入路径
   addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
 };
+```
+
+### tailwindcss
+
+```
+// 安装tailwindcss
+yarn add tailwindcss@latest
+
+// 安装postcss及插件
+yarn add postcss@latest autoprefixer@latest -D
+
+// 创建postcss配置
+// postcss.config.js
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+
+// 初始化tailwindcss配置
+npx tailwindcss init
+
+// 在main.tsx中引入tailwindcss
+// main.js
+import "tailwindcss/tailwind.css"
+
+// 为生产而构建时，请确保配置清除 (purge) 选项以删除任何未使用类，这样生成的文件尺寸最小
+// tailwind.config.js
+purge: ['./index.html', './src/**/*.tsx'],
 ```
