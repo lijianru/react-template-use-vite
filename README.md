@@ -10,7 +10,6 @@
 - [x] ant-design
 - [x] eslint
 - [x] prettier
-- [x] normalize.css
 - [x] storybook
 - [ ] axios
 - [ ] redux
@@ -20,15 +19,6 @@
 ### 清理 src 目录
 
 删除 src 目录下无用的文件，组织新的文件夹目录。
-
-### 安装 normalize.css
-
-```
-yarn add normalize.css
-
-// 在main中引入normalize.css
-import 'normalize.css'
-```
 
 ### 安装 rect-router-dom
 
