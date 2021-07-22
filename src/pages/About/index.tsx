@@ -7,21 +7,20 @@ import useAsyncFunction from '../../hooks/useAsyncFunction';
 export function About() {
   const [value, setValue] = useState<number>();
 
+  // 1. 将请求接口的参数作为useAsyncFunction内函数的参数传入，在输入值的时候调用即可。
   const [state, callback] = useAsyncFunction(async (val: number) => {
-    await axios.get(`api/todos/${val}`);
+    const result = await axios.get(`api/todos/${val}`);
 
     console.log('fetch', val);
+    return result;
   }, []);
 
-  // useEffect(() => {
-  //   console.log('useEffect', value);
-  //   value && callback(value);
-  // }, [value]);
-
+  // 2. 将请求接口的参数作为useAsyncFunction的依赖项，每次输入值变化的时候返回一个新的函数，当新函数变化的时候调用
   // const [state, callback] = useAsyncFunction(async () => {
-  //   await axios.get(`api/todos/${value}`);
+  //   const result = await axios.get(`api/todos/${value}`);
 
   //   console.log('fetch', value);
+  //   return result;
   // }, [value]);
 
   // useEffect(() => {
@@ -33,7 +32,6 @@ export function About() {
 
   return (
     <div style={{ margin: '100px' }}>
-      {/* <InputNumber value={value} onChange={val => setValue(val)} /> */}
       <InputNumber
         value={value}
         onChange={val => {
@@ -41,6 +39,7 @@ export function About() {
           callback(val);
         }}
       />
+      {/* <InputNumber value={value} onChange={val => setValue(val)} /> */}
       <a>{Math.random()}</a>
       <p>{`${state.loading}`}</p>
     </div>
