@@ -1,16 +1,47 @@
-import { pokemonApi } from './slices/pokemon';
-import { configureStore } from '@reduxjs/toolkit';
+import {
+  FLUSH,
+  PAUSE,
+  PERSIST,
+  persistReducer,
+  persistStore,
+  PURGE,
+  REGISTER,
+  REHYDRATE,
+} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
 import { counterReducer } from './slices/counter';
+import { pokemonApi } from './slices/pokemon';
+
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  [pokemonApi.reducerPath]: pokemonApi.reducer,
+});
+
+const persistedReducer = persistReducer(
+  {
+    key: 'root',
+    version: 1,
+    storage,
+    blacklist: [pokemonApi.reducerPath],
+  },
+  rootReducer
+);
 
 export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-    [pokemonApi.reducerPath]: pokemonApi.reducer,
-  },
-  middleware: getDefaultMiddleware => getDefaultMiddleware().concat(pokemonApi.middleware),
+  reducer: persistedReducer,
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });
+
+export const persistor = persistStore(store);
 
 setupListeners(store.dispatch);
 
