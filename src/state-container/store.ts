@@ -36,9 +36,10 @@ export const store = configureStore({
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
+        // 忽略redux-persist的action types
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }),
+    }).concat(pokemonApi.middleware),
 });
 
 export const persistor = persistStore(store);
