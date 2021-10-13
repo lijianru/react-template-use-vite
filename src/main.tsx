@@ -1,9 +1,11 @@
+import 'tailwindcss/tailwind.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import 'tailwindcss/tailwind.css';
 import { Provider } from 'react-redux';
-import store from './state-container/store';
+
+import App from './App';
+import { store } from './state-container/store';
 
 ReactDOM.render(
   <React.StrictMode>

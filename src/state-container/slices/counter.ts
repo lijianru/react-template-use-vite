@@ -4,13 +4,13 @@ type CounterState = {
   value: number;
 };
 
-const initState: CounterState = {
+const initialState: CounterState = {
   value: 0,
 };
 
 export const counterSlice = createSlice({
   name: 'counter',
-  initialState: initState,
+  initialState,
   reducers: {
     increment: state => {
       state.value += 1;

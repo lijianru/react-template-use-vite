@@ -31,6 +31,7 @@ export default defineConfig({
       pages: path.resolve(__dirname, 'src/pages'),
       components: path.resolve(__dirname, 'src/components'),
       'state-container': path.resolve(__dirname, 'src/state-container'),
+      hooks: path.resolve(__dirname, 'src/hooks'),
     },
   },
   server: {

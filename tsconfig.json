@@ -19,7 +19,8 @@
     "paths": {
       "pages": ["pages/*"],
       "components": ["components/*"],
-      "state-container": ["state-container/*"]
+      "state-container": ["state-container/*"],
+      "hooks": ["hooks/*"]
     }
   },
   "include": ["./src", "stories"]
