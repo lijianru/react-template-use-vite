@@ -15,9 +15,11 @@ import { setupListeners } from '@reduxjs/toolkit/query';
 
 import { counterReducer } from './slices/counter';
 import { pokemonApi } from './slices/pokemon';
+import { users } from 'pages/Home/reducer';
 
 const rootReducer = combineReducers({
   counter: counterReducer,
+  users,
   [pokemonApi.reducerPath]: pokemonApi.reducer,
 });
 
