@@ -21,7 +21,7 @@
     "react-router-dom": "5.2.0",
     "react-use": "17.2.4",
     "redux-persist": "6.0.0",
-    "tailwindcss": "2.2.4"
+    "tailwindcss": "2.2.19"
   },
   "devDependencies": {
     "@babel/core": "7.13.16",
