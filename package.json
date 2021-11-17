@@ -1,6 +1,6 @@
 {
   "name": "vite",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "scripts": {
     "start": "vite --mode dev",
     "build:test": "vite build --mode test",
@@ -40,7 +40,7 @@
     "babel-loader": "8.2.2",
     "eslint": "7.32.0",
     "eslint-plugin-react": "7.27.0",
-    "less": "4.1.1",
+    "less": "4.1.2",
     "postcss": "8.3.11",
     "prettier": "2.4.1",
     "redux-devtools": "3.7.0",
