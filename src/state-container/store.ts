@@ -42,6 +42,7 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }).concat(pokemonApi.middleware),
+  devTools: import.meta.env.MODE === 'dev',
 });
 
 export const persistor = persistStore(store);

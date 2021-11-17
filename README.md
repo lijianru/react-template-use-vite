@@ -102,7 +102,14 @@ yarn add vite-plugin-style-import less -D
 },
 
 // 获取
-const env = process.argv[process.argv.length - 1]
+const env = import.meta.env
+# {
+#   BASE_URL: "/"
+#   DEV: true
+#   MODE: "dev"
+#   PROD: false
+#   SSR: false
+# }
 ```
 
 ### 路径别名
