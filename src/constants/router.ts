@@ -1,5 +1,5 @@
-import { Counter } from 'pages/Counter';
 import { About } from 'pages/About';
+import { Counter } from 'pages/Counter';
 import { Home } from 'pages/Home';
 import { Pokemon } from 'pages/Pokemon';
 

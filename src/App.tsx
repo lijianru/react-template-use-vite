@@ -1,7 +1,6 @@
+import { ROUTERS } from 'constants/router';
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-import { ROUTERS } from './constants/router';
 
 function App() {
   return (

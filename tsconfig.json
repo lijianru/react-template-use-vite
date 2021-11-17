@@ -20,7 +20,8 @@
       "pages": ["pages/*"],
       "components": ["components/*"],
       "state-container": ["state-container/*"],
-      "hooks": ["hooks/*"]
+      "hooks": ["hooks/*"],
+      "constants": ["constants/*"]
     }
   },
   "include": ["./src", "stories"]

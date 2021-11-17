@@ -1,6 +1,7 @@
-import { UserDto } from './type';
 import axios from 'axios';
 import { AppDispatch } from 'state-container/store';
+
+import { UserDto } from './type';
 
 export const LOADING = 'LOADING' as const;
 export const SUCCESS = 'SUCCESS' as const;

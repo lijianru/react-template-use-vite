@@ -1,8 +1,7 @@
 import { InputNumber } from 'antd';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-
-import useAsyncFunction from '../../hooks/useAsyncFunction';
+import useAsyncFunction from 'hooks/useAsyncFunction';
+import React, { useState } from 'react';
 
 export function About() {
   const [value, setValue] = useState<number>();

@@ -1,6 +1,6 @@
 import { Button, Table } from 'antd';
-import { useAppSelector } from 'hooks/useAppSelector';
 import { useAppDispatch } from 'hooks/useAppDispatch';
+import { useAppSelector } from 'hooks/useAppSelector';
 import { getUsers } from 'pages/Home/action';
 import React from 'react';
 

@@ -1,5 +1,5 @@
+import { Action, FAILED, LOADING, SUCCESS } from './action';
 import { UserDto } from './type';
-import { LOADING, SUCCESS, FAILED, Action } from './action';
 
 export type State = {
   users: UserDto[];
