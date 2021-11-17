@@ -11524,10 +11524,10 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-vite-plugin-style-import@0.9.2:
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/vite-plugin-style-import/-/vite-plugin-style-import-0.9.2.tgz#7941de6b203418e3e24d09b82e9438e6901cc0a3"
-  integrity sha512-YjPtKzr5WSwAQW6UD7DBtCraxJ4X7pQXUdBOYriowz223n3W3T2RscUs7CxzAhGDEG/ttcc6vvA6A5/eVowRTw==
+vite-plugin-style-import@0.10.1:
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/vite-plugin-style-import/-/vite-plugin-style-import-0.10.1.tgz#8732d2c04c92b7e13a7afddcb8e4a34f289fc17c"
+  integrity sha512-3P7Jyf5+b1p26t6mOd6yn8ATNPTDGDRkE19aHicFpo3K7Of7ouJabiPfWE4QaicO6grtCfWGQ0SGMAPqxUSdRA==
   dependencies:
     "@rollup/pluginutils" "^4.1.0"
     change-case "^4.1.2"
