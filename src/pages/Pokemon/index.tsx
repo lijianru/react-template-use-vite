@@ -1,7 +1,7 @@
 import React from 'react';
 import { useGetPokemonByNameQuery } from 'state-container/slices/pokemon';
 
-export function Pokemon() {
+export default function Pokemon() {
   const { data, error, isLoading } = useGetPokemonByNameQuery('bulbasaur');
 
   return (

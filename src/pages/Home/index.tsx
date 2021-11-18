@@ -4,7 +4,7 @@ import { useAppSelector } from 'hooks/useAppSelector';
 import { getUsers } from 'pages/Home/action';
 import React from 'react';
 
-export function Home() {
+export default function Home() {
   const columns = [
     {
       title: 'ID',

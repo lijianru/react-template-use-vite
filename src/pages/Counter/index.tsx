@@ -4,7 +4,7 @@ import { useAppSelector } from 'hooks/useAppSelector';
 import React from 'react';
 import { decrement, increment, incrementByAmount } from 'state-container/slices/counter';
 
-export function Counter() {
+export default function Counter() {
   const count = useAppSelector(state => state.counter.value);
   const dispatch = useAppDispatch();
 

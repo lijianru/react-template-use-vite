@@ -3,7 +3,7 @@ import axios from 'axios';
 import useAsyncFunction from 'hooks/useAsyncFunction';
 import React, { useState } from 'react';
 
-export function About() {
+export default function About() {
   const [value, setValue] = useState<number>();
 
   // 1. 将请求接口的参数作为useAsyncFunction内函数的参数传入，在输入值的时候调用即可。
