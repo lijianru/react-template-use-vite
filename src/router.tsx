@@ -1,32 +1,42 @@
 import { Spin } from 'antd';
-import React, { lazy, Suspense, ComponentType } from 'react';
+import React, { lazy, Suspense } from 'react';
 
 const Home = lazy(() => import('pages/Home'));
 const About = lazy(() => import('pages/About'));
 const Counter = lazy(() => import('pages/Counter'));
 const Pokemon = lazy(() => import('pages/Pokemon'));
 
-const wrappedSuspense = (Component: ComponentType) => (
-  <Suspense fallback={<Spin />}>
-    <Component />
-  </Suspense>
-);
-
 export const ROUTERS = [
   {
     path: '/',
-    component: () => wrappedSuspense(Home),
+    component: (
+      <Suspense fallback={<Spin />}>
+        <Home />
+      </Suspense>
+    ),
   },
   {
     path: '/about',
-    component: () => wrappedSuspense(About),
+    component: (
+      <Suspense fallback={<Spin />}>
+        <About />
+      </Suspense>
+    ),
   },
   {
     path: '/counter',
-    component: () => wrappedSuspense(Counter),
+    component: (
+      <Suspense fallback={<Spin />}>
+        <Counter />
+      </Suspense>
+    ),
   },
   {
     path: '/pokemon',
-    component: () => wrappedSuspense(Pokemon),
+    component: (
+      <Suspense fallback={<Spin />}>
+        <Pokemon />
+      </Suspense>
+    ),
   },
 ];
