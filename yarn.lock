@@ -1702,14 +1702,6 @@
     redux-thunk "^2.3.0"
     reselect "^4.0.0"
 
-"@rollup/pluginutils@^4.1.0":
-  version "4.1.0"
-  resolved "https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-4.1.0.tgz"
-  integrity sha512-TrBhfJkFxA+ER+ew2U2/fHbebhLT/l/2pRk0hfj9KusXUuRXd2v0R58AfaZK9VXDQ4TogOSEmICVrQAA3zFnHQ==
-  dependencies:
-    estree-walker "^2.0.1"
-    picomatch "^2.2.2"
-
 "@rollup/pluginutils@^4.1.1":
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-4.1.1.tgz#1d4da86dd4eded15656a57d933fda2b9a08d47ec"
@@ -5342,10 +5334,10 @@ es-get-iterator@^1.0.2:
     is-string "^1.0.5"
     isarray "^2.0.5"
 
-es-module-lexer@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-0.4.1.tgz"
-  integrity sha512-ooYciCUtfw6/d2w56UVeqHPcoCFAiJdz5XOkYpv/Txl1HMUozpXjz/2RIQgqwKdXNDPSF1W7mJCFse3G+HDyAA==
+es-module-lexer@^0.9.3:
+  version "0.9.3"
+  resolved "https://registry.yarnpkg.com/es-module-lexer/-/es-module-lexer-0.9.3.tgz#6f13db00cc38417137daf74366f535c8eb438f19"
+  integrity sha512-1HQ2M2sPtxwnvOvT1ZClHyQDiggdNjURWpY2we6aMKCQiUVxTmVs2UYPLIrD84sS+kMdUwfBSylbJPwNnBrnHQ==
 
 es-to-primitive@^1.2.1:
   version "1.2.1"
@@ -11821,15 +11813,16 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-vite-plugin-style-import@0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-style-import/-/vite-plugin-style-import-0.10.1.tgz#8732d2c04c92b7e13a7afddcb8e4a34f289fc17c"
-  integrity sha512-3P7Jyf5+b1p26t6mOd6yn8ATNPTDGDRkE19aHicFpo3K7Of7ouJabiPfWE4QaicO6grtCfWGQ0SGMAPqxUSdRA==
+vite-plugin-style-import@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-style-import/-/vite-plugin-style-import-1.4.0.tgz#f05fb7f4b79b13ac98f9bc23d9674f0755431bed"
+  integrity sha512-EGAx0zVGUkwAwvDaC66zxgzXyHE0CwAXp4O1xGKnpMcrDT9L1nlojiCjjLRQzL8C3zwY1jn9ilq+m0VABKiiLg==
   dependencies:
-    "@rollup/pluginutils" "^4.1.0"
+    "@rollup/pluginutils" "^4.1.1"
     change-case "^4.1.2"
     debug "^4.3.2"
-    es-module-lexer "^0.4.1"
+    es-module-lexer "^0.9.3"
+    fs-extra "^10.0.0"
     magic-string "^0.25.7"
 
 vite@2.6.14:

@@ -1,6 +1,6 @@
 {
   "name": "vite",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "scripts": {
     "start": "vite --mode dev",
     "build:test": "vite build --mode test",
@@ -46,6 +46,6 @@
     "redux-devtools": "3.7.0",
     "typescript": "4.5.2",
     "vite": "2.6.14",
-    "vite-plugin-style-import": "0.10.1"
+    "vite-plugin-style-import": "1.4.0"
   }
 }
