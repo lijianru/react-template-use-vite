@@ -46,6 +46,6 @@
     "redux-devtools": "3.7.0",
     "typescript": "4.5.2",
     "vite": "2.6.14",
-    "vite-plugin-style-import": "0.10.1"
+    "vite-plugin-style-import": "1.4.0"
   }
 }
