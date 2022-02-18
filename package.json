@@ -1,6 +1,6 @@
 {
   "name": "vite",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "scripts": {
     "start": "vite --mode dev",
     "build:test": "vite build --mode test",
@@ -26,10 +26,10 @@
   },
   "devDependencies": {
     "@babel/core": "7.17.2",
-    "@storybook/addon-actions": "6.4.9",
-    "@storybook/addon-essentials": "6.4.9",
-    "@storybook/addon-links": "6.4.9",
-    "@storybook/react": "6.4.9",
+    "@storybook/addon-actions": "6.4.19",
+    "@storybook/addon-essentials": "6.4.19",
+    "@storybook/addon-links": "6.4.19",
+    "@storybook/react": "6.4.19",
     "@types/node": "16.11.25",
     "@types/react": "17.0.39",
     "@types/react-dom": "17.0.11",
