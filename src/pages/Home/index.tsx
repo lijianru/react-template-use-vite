@@ -3,6 +3,7 @@ import { useAppDispatch } from 'hooks/useAppDispatch';
 import { useAppSelector } from 'hooks/useAppSelector';
 import { getUsers } from 'pages/Home/action';
 import React from 'react';
+import banana from 'images/banana.jpg';
 
 export default function Home() {
   const columns = [
@@ -43,6 +44,7 @@ export default function Home() {
           <p className="text-gray-500">You have a new message!</p>
         </div>
       </div>
+      <img src={banana} />
     </div>
   );
 }

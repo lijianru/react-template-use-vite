@@ -34,6 +34,7 @@ export default defineConfig({
       'state-container': path.resolve(__dirname, 'src/state-container'),
       hooks: path.resolve(__dirname, 'src/hooks'),
       constants: path.resolve(__dirname, 'src/constants'),
+      images: path.resolve(__dirname, './assets/images'),
     },
   },
   server: {
