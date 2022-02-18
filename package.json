@@ -2,10 +2,10 @@
   "name": "vite",
   "version": "0.21.0",
   "scripts": {
-    "start": "vite --mode dev",
+    "start": "vite --mode dev --open",
     "build:test": "vite build --mode test",
     "build:prod": "vite build --mode production",
-    "serve": "vite preview",
+    "serve": "vite preview --open",
     "tsc": "tsc",
     "eslint": "eslint src",
     "prettier": "prettier --config ./.prettierrc.json --write 'src/**/*.@(js|ts)?(x)'",
