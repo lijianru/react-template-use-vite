@@ -1,6 +1,6 @@
 {
   "name": "vite",
-  "version": "0.22.0",
+  "version": "0.23.0",
   "scripts": {
     "start": "vite --mode dev --open",
     "build:test": "vite build --mode test",
@@ -40,7 +40,7 @@
     "autoprefixer": "10.4.2",
     "babel-loader": "8.2.3",
     "eslint": "8.9.0",
-    "eslint-plugin-react": "7.27.1",
+    "eslint-plugin-react": "7.28.0",
     "less": "4.1.2",
     "postcss": "8.4.6",
     "prettier": "2.5.1",
