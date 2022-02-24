@@ -1,6 +1,6 @@
 {
   "name": "vite",
-  "version": "0.24.0",
+  "version": "0.25.0",
   "scripts": {
     "start": "vite --mode dev --open",
     "build:test": "vite build --mode test",
@@ -25,7 +25,7 @@
     "tailwindcss": "3.0.23"
   },
   "devDependencies": {
-    "@babel/core": "7.17.2",
+    "@babel/core": "7.17.5",
     "@storybook/addon-actions": "6.4.19",
     "@storybook/addon-essentials": "6.4.19",
     "@storybook/addon-links": "6.4.19",
