@@ -1,24 +1,25 @@
 import { defineConfig } from 'vite';
-import reactRefresh from '@vitejs/plugin-react-refresh';
-import styleImport from 'vite-plugin-style-import';
+// import { createStyleImportPlugin, AntdResolve } from 'vite-plugin-style-import';
 import path from 'path';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   base: './',
   plugins: [
-    reactRefresh(),
-    styleImport({
-      libs: [
-        {
-          libraryName: 'antd',
-          esModule: true,
-          resolveStyle: name => {
-            return `antd/es/${name}/style/index`;
-          },
-        },
-      ],
-    }),
+    react(),
+    // createStyleImportPlugin({
+    //   resolves: [AntdResolve()],
+    //   libs: [
+    //     {
+    //       libraryName: 'antd',
+    //       esModule: true,
+    //       resolveStyle: name => {
+    //         return `antd/es/${name}/style/index`;
+    //       },
+    //     },
+    //   ],
+    // }),
   ],
   css: {
     preprocessorOptions: {
