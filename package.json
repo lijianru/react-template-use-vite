@@ -1,6 +1,6 @@
 {
   "name": "vite",
-  "version": "0.26.0",
+  "version": "0.27.0",
   "scripts": {
     "start": "vite --mode dev --open",
     "build:test": "vite build --mode test",
@@ -34,8 +34,8 @@
     "@types/react": "17.0.39",
     "@types/react-dom": "17.0.11",
     "@types/react-router-dom": "5.3.3",
-    "@typescript-eslint/eslint-plugin": "5.12.0",
-    "@typescript-eslint/parser": "5.12.0",
+    "@typescript-eslint/eslint-plugin": "5.12.1",
+    "@typescript-eslint/parser": "5.12.1",
     "@vitejs/plugin-react-refresh": "1.3.6",
     "autoprefixer": "10.4.2",
     "babel-loader": "8.2.3",
