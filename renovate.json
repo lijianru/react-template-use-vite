@@ -1,5 +1,11 @@
 {
   "extends": ["config:base"],
   "bumpVersion": "minor",
-  "schedule": ["before 3am on the first day of the month"]
+  "schedule": ["before 3am on the first day of the month"],
+  "packageRules": [
+    {
+      "groupName": "reactType",
+      "matchPackagePrefixes": ["@types/react", "@types/react-dom"]
+    }
+  ]
 }
