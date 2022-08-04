@@ -13,45 +13,17 @@ const Pokemon = lazy(() => import('pages/Pokemon'));
 
 export default function App() {
   return (
-    <div>
+    <Suspense fallback={<Spin />}>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route
-            index
-            element={
-              <Suspense fallback={<Spin />}>
-                <Home />
-              </Suspense>
-            }
-          />
-          <Route
-            path="about"
-            element={
-              <Suspense fallback={<Spin />}>
-                <About />
-              </Suspense>
-            }
-          />
-          <Route
-            path="counter"
-            element={
-              <Suspense fallback={<Spin />}>
-                <Counter />
-              </Suspense>
-            }
-          />
-          <Route
-            path="pokemon"
-            element={
-              <Suspense fallback={<Spin />}>
-                <Pokemon />
-              </Suspense>
-            }
-          />
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="counter" element={<Counter />} />
+          <Route path="pokemon" element={<Pokemon />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
       </Routes>
-    </div>
+    </Suspense>
   );
 }
 
