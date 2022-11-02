@@ -4,6 +4,7 @@ import { useAppSelector } from 'hooks/useAppSelector';
 import { getUsers } from 'pages/Home/action';
 import React from 'react';
 import banana from 'images/banana.jpg';
+import { useMountEffect } from '@react-hookz/web';
 
 export default function Home() {
   const columns = [
@@ -32,6 +33,10 @@ export default function Home() {
   const dispatch = useAppDispatch();
   const loading = useAppSelector(state => state.users.loading);
   const users = useAppSelector(state => state.users.users);
+
+  useMountEffect(() => {
+    getUsers();
+  });
 
   return (
     <div>
