@@ -35,7 +35,7 @@ export default function Home() {
   const users = useAppSelector(state => state.users.users);
 
   useMountEffect(() => {
-    getUsers();
+    dispatch(getUsers());
   });
 
   return (
