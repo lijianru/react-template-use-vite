@@ -1,21 +1,21 @@
 import { InputNumber } from 'antd';
 import axios from 'axios';
-import useAsyncFunction from 'hooks/useAsyncFunction';
 import React, { useState } from 'react';
+import { useAsync } from '@react-hookz/web';
 
 export default function About() {
   const [value, setValue] = useState<number>();
 
-  // 1. 将请求接口的参数作为useAsyncFunction内函数的参数传入，在输入值的时候调用即可。
-  const [state, callback] = useAsyncFunction(async (val: number) => {
+  // 1. 将请求接口的参数作为useAsync内函数的参数传入，在输入值的时候调用即可。
+  const [state, actions] = useAsync(async (val: number) => {
     const result = await axios.get(`api/todos/${val}`);
 
     console.log('fetch', val);
     return result;
-  }, []);
+  });
 
-  // 2. 将请求接口的参数作为useAsyncFunction的依赖项，每次输入值变化的时候返回一个新的函数，当新函数变化的时候调用
-  // const [state, callback] = useAsyncFunction(async () => {
+  // 2. 将请求接口的参数作为useAsync的依赖项，每次输入值变化的时候返回一个新的函数，当新函数变化的时候调用
+  // const [state, callback] = useAsync(async () => {
   //   const result = await axios.get(`api/todos/${value}`);
 
   //   console.log('fetch', value);
@@ -35,12 +35,12 @@ export default function About() {
         value={value}
         onChange={val => {
           setValue(val);
-          callback(val);
+          actions.execute(val);
         }}
       />
       {/* <InputNumber value={value} onChange={val => setValue(val)} /> */}
       <a>{Math.random()}</a>
-      <p>{`${state.loading}`}</p>
+      <p>{`${state.status}`}</p>
     </div>
   );
 }
