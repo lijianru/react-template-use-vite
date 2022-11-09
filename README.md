@@ -54,38 +54,6 @@ yarn add @types/react-router-dom -D
 
 ```
 yarn add antd
-
-yarn add vite-plugin-style-import less -D
-```
-
-- 修改 vite 配置
-
-```diff
-+import vitePluginImp from 'vite-plugin-imp';
-
- export default defineConfig({
-   plugins: [
-     reactRefresh(),
-+    styleImport({
-+      libs: [
-+        {
-+          libraryName: 'antd',
-+          esModule: true,
-+          resolveStyle: (name) => {
-+            return `antd/es/${name}/style/index`;
-+          },
-+        },
-+      ],
-+    }),
-   ],
-+  css: {
-+    preprocessorOptions: {
-+      less: {
-+        javascriptEnabled: true,
-+      },
-+    },
-+  },
- });
 ```
 
 ### 环境变量
