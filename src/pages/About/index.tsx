@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import { useAsync } from '@react-hookz/web';
 
 export default function About() {
-  const [value, setValue] = useState<number>();
+  const [value, setValue] = useState<number | null>();
 
   // 1. 将请求接口的参数作为useAsync内函数的参数传入，在输入值的时候调用即可。
-  const [state, actions] = useAsync(async (val: number) => {
+  const [state, actions] = useAsync(async (val: number | null) => {
     const result = await axios.get(`api/todos/${val}`);
 
     console.log('fetch', val);
