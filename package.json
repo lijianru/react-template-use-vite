@@ -1,6 +1,6 @@
 {
   "name": "vite",
-  "version": "0.34.0",
+  "version": "0.35.0",
   "scripts": {
     "start": "vite --mode dev --open",
     "build:test": "vite build --mode test",
@@ -19,7 +19,7 @@
     "axios": "0.26.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-redux": "7.2.9",
+    "react-redux": "8.0.5",
     "react-router-dom": "6.4.3",
     "tailwindcss": "3.0.23"
   },
