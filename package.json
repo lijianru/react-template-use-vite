@@ -1,6 +1,6 @@
 {
   "name": "vite",
-  "version": "0.37.0",
+  "version": "0.38.0",
   "scripts": {
     "start": "vite --mode dev --open",
     "build:test": "vite build --mode test",
@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@react-hookz/web": "^18.0.0",
-    "@reduxjs/toolkit": "1.7.2",
+    "@reduxjs/toolkit": "1.9.0",
     "antd": "5.0.0-beta.0",
     "axios": "0.26.0",
     "react": "18.2.0",
