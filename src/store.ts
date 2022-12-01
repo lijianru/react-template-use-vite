@@ -1,8 +1,8 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
-import { counterReducer } from './slices/counter';
-import { pokemonApi } from './slices/pokemon';
+import { counterReducer } from './pages/Counter/counterSlice';
+import { pokemonApi } from './pages/Pokemon/pokemonSlice';
 import { users } from 'pages/Home/reducer';
 
 const rootReducer = combineReducers({

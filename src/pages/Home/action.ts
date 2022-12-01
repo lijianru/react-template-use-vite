@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { AppDispatch } from 'state-container/store';
+import { AppDispatch } from 'store';
 
 import { UserDto } from './type';
 

@@ -20,7 +20,6 @@
     "paths": {
       "pages": ["pages/*"],
       "components": ["components/*"],
-      "state-container": ["state-container/*"],
       "hooks": ["hooks/*"],
       "constants": ["constants/*"]
     }

@@ -1,8 +1,8 @@
 import { Button } from 'antd';
 import { useAppDispatch } from 'hooks/useAppDispatch';
 import { useAppSelector } from 'hooks/useAppSelector';
+import { increment, decrement, incrementByAmount } from './counterSlice';
 import React from 'react';
-import { decrement, increment, incrementByAmount } from 'state-container/slices/counter';
 
 export default function Counter() {
   const count = useAppSelector(state => state.counter.value);
