@@ -1,6 +1,6 @@
 {
   "name": "vite",
-  "version": "0.39.0",
+  "version": "0.40.0",
   "scripts": {
     "start": "vite --mode dev --open",
     "build:test": "vite build --mode test",
@@ -45,6 +45,6 @@
     "prettier": "2.5.1",
     "redux-devtools": "3.7.0",
     "typescript": "4.5.5",
-    "vite": "3.2.3"
+    "vite": "3.2.11"
   }
 }
