@@ -1,6 +1,6 @@
 {
   "name": "vite",
-  "version": "0.39.0",
+  "version": "0.40.0",
   "scripts": {
     "start": "vite --mode dev --open",
     "build:test": "vite build --mode test",
@@ -30,8 +30,8 @@
     "@storybook/addon-links": "6.5.13",
     "@storybook/react": "6.5.13",
     "@types/node": "16.11.25",
-    "@types/react": "17.0.3",
-    "@types/react-dom": "18.0.8",
+    "@types/react": "17.0.83",
+    "@types/react-dom": "18.3.1",
     "@typescript-eslint/eslint-plugin": "5.12.1",
     "@typescript-eslint/parser": "5.12.1",
     "@vitejs/plugin-react": "2.2.0",
